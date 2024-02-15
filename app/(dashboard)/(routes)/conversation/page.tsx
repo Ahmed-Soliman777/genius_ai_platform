@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { CreateChatCompletionRequestMessage } from "openai/resources/chat/completions";
-import OpenAI from "openai";
 import { Empty } from "@/components/Empty";
 import { Loader } from "@/components/Loader";
 import { cn } from "@/lib/utils";
@@ -69,7 +68,7 @@ const ConversationPage = () => {
         description="Our most advanced conversation model"
         icon={MessagesSquare}
         iconColor="text-violet-500"
-        bgColor="text-violet-500/10"
+        bgColor="bg-violet-500/10"
       />
       <div className="px-4 lg:px-8">
         <div className="">
