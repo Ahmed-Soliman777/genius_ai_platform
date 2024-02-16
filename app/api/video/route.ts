@@ -30,7 +30,7 @@ export async function POST(
                 model: "xl",
                 width: 1024,
                 height: 576,
-                prompt,
+                prompt:prompt,
                 batch_size: 1,
                 num_frames: 24,
                 init_weight: 0.5,
