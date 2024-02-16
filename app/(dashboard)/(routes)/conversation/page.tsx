@@ -18,6 +18,7 @@ import { Loader } from "@/components/Loader";
 import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/components/UserAvatar";
 import { BotAvatar } from "@/components/BotAvatar";
+import toast from "react-hot-toast";
 
 const ConversationPage = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -55,7 +56,9 @@ const ConversationPage = () => {
 
       form.reset(); // clear input field
     } catch (error: any) {
-      console.log(error);
+      if (error) {
+        toast.error("Something went wrong")
+      }
     } finally {
       router.refresh();
     }
